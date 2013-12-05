@@ -1,0 +1,19 @@
+<dataConfig>
+        <dataSource type="FileDataSource" encoding="UTF-8" />
+        <document>
+        <entity name="page"
+                processor="XPathEntityProcessor"
+                stream="true"
+                forEach="/mediawiki/page/"
+                url="wikinews.xml"
+                transformer="RegexTransformer,DateFormatTransformer"
+                >
+                
+                         
+            <field column="id"     xpath="/mediawiki/page/id" />
+            <field column="title"     xpath="/mediawiki/page/title" />
+            <field column="text"      xpath="/mediawiki/page/text" />
+            <field column="$skipDoc"  regex="^#REDIRECT .*" replaceWith="true" sourceColName="text"/>
+       </entity>
+        </document>
+</dataConfig>

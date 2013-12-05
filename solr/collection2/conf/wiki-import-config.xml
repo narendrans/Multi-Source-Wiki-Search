@@ -1,0 +1,18 @@
+<dataConfig>
+        <dataSource type="FileDataSource" encoding="UTF-8" />
+        <document>
+        <entity name="page"
+                processor="XPathEntityProcessor"
+                stream="true"
+                forEach="/mediawiki/page/"
+                url="test_final.xml"
+                transformer="RegexTransformer,DateFormatTransformer"
+                >
+                
+                <field column="id"     xpath="/mediawiki/page/id" />
+            <field column="title"     xpath="/mediawiki/page/title" />
+            <field column="text"      xpath="/mediawiki/page/text" />
+            
+       </entity>
+        </document>
+</dataConfig>
