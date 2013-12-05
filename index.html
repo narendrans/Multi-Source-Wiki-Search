@@ -158,7 +158,7 @@ $("#submit").click(function() {
         $("#column1").html(ajax_load).load(loadUrl + query);
         $("#image").html(ajax_load).load(loadImage + query);
         $("#quote").html(ajax_load).load(loadQuote + query);
-$("#twitter").html(twitter_load).load("http://localhost/ir/twitter/sachin.php?q=" + query);
+$("#twitter").html(twitter_load).load("http://localhost/ir/twitter/tweets.php?q=" + query);
         $("#column2").empty();
         var url = "http://en.wikipedia.org/w/api.php?action=parse&format=json&page=" + $("#queryBox").val() + "&redirects&prop=text&callback=?";
         $.getJSON(url, function(data) {
