@@ -1,11 +1,8 @@
 <?php
 /*
-	
-	@author Naren
-    @version 1.0
-    
-   	Gets a set of images for the given query using Google AJAX API.
-
+@author Naren
+@version 1.0
+Gets a set of images for the given query using Google AJAX API.
 */
 
 error_reporting(0);
